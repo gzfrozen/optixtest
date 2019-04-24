@@ -1,4 +1,4 @@
-docker run --name=optix-x11 --runtime=nvidia --net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw" -it env:0.5
-docker run --name=optix-vs --runtime=nvidia --security-opt seccomp:unconfined -p 12345:22 -d env:0.5 /usr/sbin/sshd -D
+docker run --name=optix-x11 --runtime=nvidia --net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/root/.Xauthority:rw" -it gzfrozen/env:0.4
+docker run --name=optix-vs --runtime=nvidia --security-opt seccomp:unconfined -p 12345:22 -d gzfrozen/env:0.4 /usr/sbin/sshd -D
 
 /*This two command used to run container on server, use the second line to run a container which can be accessed by visual studio.*/
