@@ -1,7 +1,5 @@
-#define GLEW_NO_GLU
 #include <cstdlib>
 #include <iostream>
-#include <GL/glew.h>
 #include <GLFW/glfw3.h>
 int main()
 {
@@ -25,14 +23,6 @@ int main()
 	}
 	// 作成したウィンドウを OpenGL の処理対象にする
 	glfwMakeContextCurrent(window);
-	// GLEW を初期化する
-	/*glewExperimental = GL_TRUE;*/
-	if (glewInit() != GLEW_OK)
-	{
-		// GLEW の初期化に失敗した
-		std::cerr << "Can't initialize GLEW" << std::endl;
-		return 1;
-	}
 	// 背景色を指定する
 	glClearColor(1.0f, 1.0f, 1.0f, 0.0f);
 	// ウィンドウが開いている間繰り返す
